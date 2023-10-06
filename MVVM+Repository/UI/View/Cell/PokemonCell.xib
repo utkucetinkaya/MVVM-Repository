@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="KGk-i7-Jjw" customClass="PokemonCell" customModule="MVVM_Repository" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wm-at-fCD" customClass="CardView" customModule="MVVM_Repository" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="331" height="96"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wkc-ZE-hHy">
+                                <rect key="frame" x="8" y="8" width="315" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hca-Kh-UgI">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="8nw-0y-UyF"/>
+                                            <constraint firstAttribute="width" constant="150" id="eHd-r2-UbQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfa-vf-8Nh">
+                                        <rect key="frame" x="165" y="0.0" width="150" height="80"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                        <color key="textColor" red="0.1072708592" green="0.26140499109999998" blue="0.28257945179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wkc-ZE-hHy" firstAttribute="leading" secondItem="0wm-at-fCD" secondAttribute="leading" constant="8" id="5KL-7L-fBQ"/>
+                            <constraint firstAttribute="trailing" secondItem="wkc-ZE-hHy" secondAttribute="trailing" constant="8" id="DzQ-mW-GVi"/>
+                            <constraint firstAttribute="bottom" secondItem="wkc-ZE-hHy" secondAttribute="bottom" constant="8" id="LBH-Ou-EJh"/>
+                            <constraint firstItem="wkc-ZE-hHy" firstAttribute="top" secondItem="0wm-at-fCD" secondAttribute="top" constant="8" id="hwE-m6-W3t"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                <constraints>
+                    <constraint firstItem="0wm-at-fCD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="BBU-Qy-EGE"/>
+                    <constraint firstAttribute="trailing" secondItem="0wm-at-fCD" secondAttribute="trailing" constant="5" id="RRM-QD-97L"/>
+                    <constraint firstAttribute="bottom" secondItem="0wm-at-fCD" secondAttribute="bottom" constant="10" id="gIL-I1-RLm"/>
+                    <constraint firstItem="0wm-at-fCD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="oVo-bW-0to"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="bfa-vf-8Nh" id="kCu-Hv-WGg"/>
+                <outlet property="pokemonImageView" destination="hca-Kh-UgI" id="mmh-ks-vLR"/>
+            </connections>
+            <point key="canvasLocation" x="135.38461538461539" y="-4.9763033175355451"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
